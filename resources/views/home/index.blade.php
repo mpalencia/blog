@@ -20,7 +20,11 @@
 
               <div class="entry-thumb">
                 <a href="/blog/{{ $blog->slug }}" class="thumb-link">
-                <img src="images/{{ $blog->image }}">             
+                @if($blog->image)
+                  <img src="images/{{ $blog->image }}"> 
+                @else
+                  <img src="images/lorem_ipsum.jpg">
+                @endif      
                 </a>
               </div>
 
