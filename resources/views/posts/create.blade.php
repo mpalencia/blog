@@ -1,11 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('title', '| Create New Post')
 
 @section('stylesheets')
 
-	{!! Html::style('css/parsley.css') !!}
-	{!! Html::style('css/select2.min.css') !!}
 	<link rel="stylesheet" href="css/parsley.css">
 	<link rel="stylesheet" href="css/select2.css">
 	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
@@ -24,7 +22,7 @@
 
 
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
 			<h1>Create New Post</h1>
 			<hr>
 			{!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true)) !!}
@@ -56,7 +54,7 @@
 				{{ Form::label('body', "Post Body:") }}
 				{{ Form::textarea('body', null, array('class' => 'form-control')) }}
 
-				{{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
+				{{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block bg-blue', 'style' => 'margin-top: 20px;')) }}
 			{!! Form::close() !!}
 		</div>
 	</div>
@@ -66,11 +64,11 @@
 
 @section('scripts')
 
-	{!! Html::script('js/parsley.min.js') !!}
-	{!! Html::script('js/select2.min.js') !!}
-
+	<script src="js/parsley.min.js"></script>
+	<script src="js/select2.min.js"></script>
 	<script type="text/javascript">
 		$('.select2-multi').select2();
+		alert(3);
 	</script>
 
 @endsection

@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
 <div class="container">
-    <div class="row login">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading"><h3>Register</h3></div>
 
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12 col-md-offset-4">
                                 <button type="button" class="btn btn-primary" onclick="window.location.href='/login'">
                                     Login
                                 </button>

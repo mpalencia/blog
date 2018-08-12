@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('title', '| View Post')
 
 @section('content')
 
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<h1>{{ $post->title }}</h1>
 			
 			<p class="lead">{!! $post->body !!}</p>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-5">
 			<div class="well">
 				<dl class="dl-horizontal">
 					<label>Url:</label>
@@ -71,13 +71,15 @@
 				</dl>
 				<hr>
 				<div class="row">
-					<div class="col-sm-6">
-						{!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
+					<div class="col-sm-4">
+						<button type="button" class="btn btn-primary" onclick="window.location.href='/posts/{{ $post->id }}/edit'">
+                            Edit
+                        </button>
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-8">
 						{!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
 
-						{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block']) !!}
+						{!! Form::submit('Delete', ['class' => 'btn btn-primary']) !!}
 
 						{!! Form::close() !!}
 					</div>

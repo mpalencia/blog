@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
 <div class="container">
-    <div class="row login">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading"><h3>Login</h3></div>
 
@@ -39,6 +39,7 @@
                             </div>
                         </div>
 
+                        <!--
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
@@ -48,6 +49,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">

@@ -178,7 +178,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //Illuminate\Html\HtmlServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+
+        Mews\Purifier\PurifierServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -233,6 +236,8 @@ return [
         //'Form' => Illuminate\Html\FormFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Purifier'  => Mews\Purifier\Facades\Purifier::class,
+        'Image'     => Intervention\Image\Facades\Image::class
     ],
 
 ];
