@@ -35,7 +35,7 @@ class LoginController extends Controller
     public function __construct()
     {
         if(\Auth::check()) {
-            return Redirect::route('/dashboard');
+            return Redirect::route('/posts');
         } else {
             $this->middleware('guest')->except('logout');
         }
